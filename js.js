@@ -1,5 +1,3 @@
-console.log("Hello World!");
-
 /*getComputerChoice() function will randomly return one of the following strings values: "rock", "paper" or "scissors"*/
 
 function getComputerChoice() {
@@ -13,4 +11,11 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+/*getHumanChoice() will be the function that takes the user choice and returns it */
+function getHumanChoice(string) {
+    let humanChoice = string; 
+    return humanChoice;
+}
+
+console.log("Your choice: " + getHumanChoice(prompt("rock, paper or scissors?")));
+console.log("The computer chose: " + getComputerChoice());
