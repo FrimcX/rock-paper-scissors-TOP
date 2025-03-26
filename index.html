@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Rock, Paper or Scissors!</h1>
-    <h2>Round 1</h2>
+    <header>
+        <h1>Rock, Paper or Scissors!</h1>
+    </header>
     <div class="game-main">
-        <div class="human">
-            <h2>Human</h2>
-            <div class="human-selection">
-                <p class="human-selection-text">Make a choice!</p>
+        <h2 class="round">Round 1</h2>
+        <div class="play-area">
+            <div class="human">
+                <h2>Human</h2>
+                <div class="human-selection">
+                    <p class="human-selection-text">Make a choice!</p>
+                </div>
+                <div class="human-selection-buttons">
+                    <button>ROCK!</button>
+                    <button>PAPER!</button>
+                    <button>SCISSOR!</button>
+                </div>
             </div>
-            <div class="buttons">
-                <button>ROCK!</button>
-                <button>PAPER!</button>
-                <button>SCISSOR!</button>
-            </div>
+            <div class="computer">
+                <h2>Computer</h2>
+                <div class="computer-selection">
+                    <p class="computer-selection-text">Waiting for human choice...</p>
+                </div>
+            </div>    
         </div>
-        <div class="computer">
-            <h2>Computer</h2>
-            <div class="computer-selection">
-                <p class="computer-selection-text">Waiting for human choice...</p>
-            </div>
-        </div>
+        
     </div>
     <div class="game-score">
         <div class="human-score">

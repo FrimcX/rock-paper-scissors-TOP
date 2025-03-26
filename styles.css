@@ -1,0 +1,129 @@
+body {
+    background-color: #011F26;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px;
+    color: #66fbfb;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    padding: 10px 30px;
+    border: 2px solid #66fbfb; 
+    border-radius: 20px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 47px;
+    padding: 3px 40px ;
+    margin: 0;
+}
+
+/* ----------------------- GAME MAIN -------------------------------*/
+
+.game-main {
+    background-color: #02687326;
+    border: 3px solid #047979;
+    border-radius: 40px;
+    margin: 20px;
+    padding: 0 40px 40px 40px;
+    flex: 1;
+    align-self: stretch;
+}
+
+.round {
+    font-size: 40px;
+    margin: 20px ;
+}
+
+.play-area {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.play-area h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.play-area p {
+    font-size: 25px;
+}
+
+
+.play-area .human p {
+    border: 3px solid #F2A007;
+    border-radius: 20px;
+    color: #F2A007;
+    display: inline-block;
+    margin: 15px;
+    padding: 5px 25px;
+}
+
+.game-main .human, .game-main .computer {
+    border: 2px solid #66fbfb;
+    border-radius: 10px;
+    flex: 1;
+    padding: 20px;
+    background-color: #011F26;
+}
+
+.game-main .computer {
+    border: 2px solid #F2A007;
+    color: #F2A007;
+}
+
+.human-selection-buttons button {
+    padding: 10px;
+    border: 2px solid #66fbfb;
+    background-color: #047979;
+    border-radius: 5px;
+    margin: 10px;
+    color: #66fbfb;
+    font-size: 16px;
+}
+
+/* -------------------------- GAME SCORE ------------------------------------*/
+
+.game-score {
+    border: 2px solid #66fbfb;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.human-score, .computer-score {
+    padding: 10px 50px;
+}
+
+.human-score h2, .computer-score h2 {
+    /* padding: 0 50px; */
+    margin: 10px 50px 0 50px ;
+    text-wrap: nowrap;
+}
+
+.human-score p, .computer-score p {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.human-score {
+    /* background-color: #02788569; */
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    flex: 1;
+}
+
+.computer-score {
+    /* background-color: #f2a00749; */
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: #F2A007;
+    flex: 1;
+}
