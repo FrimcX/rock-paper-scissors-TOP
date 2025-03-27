@@ -23,13 +23,11 @@ header {
     padding: 10px 30px;
     border: 2px solid #66fbfb; 
     border-radius: 20px;
-    /* margin-right: auto; */
 }
 .edition {
     justify-self: end;
     align-self: flex-end;
     margin: 0;
-    /* margin-left: auto; */
     padding: 0;
 }
 
@@ -158,14 +156,12 @@ h1 {
 }
 
 .human-score {
-    /* background-color: #02788569; */
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     flex: 1 1 0;
 }
 
 .computer-score {
-    /* background-color: #f2a00749; */
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     color: #F2A007;

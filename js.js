@@ -11,15 +11,6 @@ function getComputerChoice() {
     }
 }
 
-/*getHumanChoice() will be the function that takes the user choice and returns it */
-function getHumanChoice(string) {
-    let humanChoice = string.toLowerCase(); //humanChoice but case insensitive
-    return humanChoice;
-}
-
-/*
-function playGame() {*/
-    
     //variables to save the score 
     let humanScore = 0; 
     let computerScore = 0;
@@ -36,7 +27,7 @@ function playGame() {*/
         if (playerSelection === '') {
             return;
         }
-        
+
         humanSelectionText.textContent = playerSelection.toUpperCase() + '!!!';
         computerSelectionText.textContent = computerChoice.toUpperCase() + '!!!';
 
