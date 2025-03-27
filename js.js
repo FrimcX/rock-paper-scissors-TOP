@@ -32,6 +32,11 @@ function playGame() {*/
     function playRound(e) {
         let computerChoice = getComputerChoice();
         const playerSelection = e.target.id;
+
+        if (playerSelection === '') {
+            return;
+        }
+        
         humanSelectionText.textContent = playerSelection.toUpperCase() + '!!!';
         computerSelectionText.textContent = computerChoice.toUpperCase() + '!!!';
 
@@ -39,10 +44,6 @@ function playGame() {*/
         gameHistoryHuman.setAttribute('class', 'game-history');
         const gameHistoryComputer = document.createElement('p');
         gameHistoryComputer.setAttribute('class', 'game-history');
-
-        if (playerSelection === '') {
-            return;
-        }
         
         switch (playerSelection) {
             case ('rock'): {
@@ -88,6 +89,22 @@ function playGame() {*/
         gameHistoryComputer.textContent = computerChoice;
         humanScoreText.parentNode.appendChild(gameHistoryHuman);
         computerScoreText.parentNode.appendChild(gameHistoryComputer);
+
+    if (humanScore === 5) {
+        round.textContent = 'The human reached 5 points. The Human won the game!';
+        round.setAttribute('class', 'round round-human');
+        buttons.removeEventListener('click', playRound);
+        buttons.addEventListener('click', () => {
+            alert('Reload the page to play again!');
+        });
+    } else if (computerScore === 5) {
+        round.textContent = 'The Computer reached 5 points. The Computer won the game!';
+        round.setAttribute('class', 'round round-computer');
+        buttons.removeEventListener('click', playRound);
+        buttons.addEventListener('click', () => {
+            alert('Reload the page to play again!');
+        });
+    }
     }
 
 const buttons = document.querySelector('.human-selection-buttons');
