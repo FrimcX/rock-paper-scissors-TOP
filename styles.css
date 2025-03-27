@@ -95,20 +95,25 @@ h1 {
     border: 2px solid #66fbfb;
     border-radius: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.human-score, .computer-score {
-    padding: 10px 50px;
+.human-score {
+    padding: 10px 0px 10px 50px;
 }
+
+.computer-score {
+    padding: 10px 50px 10px 0px;
+
+} 
 
 .human-score h2, .computer-score h2 {
-    /* padding: 0 50px; */
+    padding: 0 20px;
     margin: 10px 50px 0 50px ;
     text-wrap: nowrap;
 }
 
-.human-score p, .computer-score p {
+.human-score-text , .computer-score-text {
     font-size: 30px;
     margin: 10px 0;
 }
@@ -117,7 +122,7 @@ h1 {
     /* background-color: #02788569; */
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    flex: 1;
+    flex: 1 1 0;
 }
 
 .computer-score {
@@ -125,5 +130,11 @@ h1 {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     color: #F2A007;
-    flex: 1;
+    flex: 1 1 0;
+}
+
+.game-history {
+    border-bottom: 2px solid #fff;
+    margin: 0;
+    font-size: 30px;
 }

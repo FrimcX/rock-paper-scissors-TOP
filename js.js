@@ -26,6 +26,8 @@ function playGame() {*/
     const round = document.querySelector('.round');
     const humanSelectionText = document.querySelector('.human-selection-text');
     const computerSelectionText = document.querySelector('.computer-selection-text');
+    const humanScoreText = document.querySelector('.human-score-text');
+    const computerScoreText = document.querySelector('.computer-score-text');
 
     function playRound(e) {
         let computerChoice = getComputerChoice();
@@ -33,10 +35,14 @@ function playGame() {*/
         humanSelectionText.textContent = playerSelection.toUpperCase() + '!!!';
         computerSelectionText.textContent = computerChoice.toUpperCase() + '!!!';
 
+        const gameHistoryHuman = document.createElement('p');
+        gameHistoryHuman.setAttribute('class', 'game-history');
+        const gameHistoryComputer = document.createElement('p');
+        gameHistoryComputer.setAttribute('class', 'game-history');
+
         if (playerSelection === '') {
             return;
         }
-        console.log("Human: " + playerSelection + " | Computer: " + computerChoice); //checking choices
         
         switch (playerSelection) {
             case ('rock'): {
@@ -76,12 +82,13 @@ function playGame() {*/
                 break;
             }
         }
+        humanScoreText.textContent = String(humanScore);
+        computerScoreText.textContent = String(computerScore);
+        gameHistoryHuman.textContent = playerSelection;
+        gameHistoryComputer.textContent = computerChoice;
+        humanScoreText.parentNode.appendChild(gameHistoryHuman);
+        computerScoreText.parentNode.appendChild(gameHistoryComputer);
     }
-
-/*
-}
-
-playGame(); */
 
 const buttons = document.querySelector('.human-selection-buttons');
 buttons.addEventListener('click', playRound);
